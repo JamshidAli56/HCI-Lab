@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEats | Fresh Organic Food Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span>🍏</span>
+                    <h1>GreenEats</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button class="btn-login">Login</button>
+                    <button class="btn-signup">Sign Up</button>
+                    <button id="cart-icon" aria-label="View cart" style="position:relative; background:transparent; color:#4CAF50; font-size:1.5rem; margin-left:10px; border:none; cursor:pointer;">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" style="position:absolute; top:-8px; right:-8px; background:#FF9800; color:#fff; border-radius:50%; padding:2px 7px; font-size:0.8rem;">0</span>
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fresh, Organic Food Delivered to Your Door</h1>
+                <p>Get farm-to-table meals in under 30 minutes. Healthy eating made easy!</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Order Now</button>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Organic Food">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Choose GreenEats?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>100% Organic</h3>
+                    <p>No pesticides, no artificial additives—just pure, natural goodness.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your order in under 30 minutes, guaranteed.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Healthy eating shouldn’t break the bank.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2>Our Popular Products</h2>
+            <div class="product-categories" style="text-align:center; margin-bottom:30px;">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="salads"><i class="fas fa-seedling"></i> Salads</button>
+                <button class="category-btn" data-category="drinks"><i class="fas fa-wine-glass-alt"></i> Drinks</button>
+                <button class="category-btn" data-category="breakfast"><i class="fas fa-bread-slice"></i> Breakfast</button>
+            </div>
+            <div class="products-grid">
+                <!-- Salads -->
+                <div class="product-card" data-category="salads">
+                    <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Caesar Salad">
+                    <h3>Caesar Salad</h3>
+                    <p>$9.49</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="salads">
+                    <img src="https://images.unsplash.com/photo-1504674900247-ec6b0b1b7982?auto=format&fit=crop&w=800&q=80" alt="Greek Salad">
+                    <h3>Greek Salad</h3>
+                    <p>$7.99</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="salads">
+                    <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=800&q=80" alt="Quinoa Salad">
+                    <h3>Quinoa Salad</h3>
+                    <p>$8.49</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Drinks -->
+                <div class="product-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Berry Blast">
+                    <h3>Berry Blast</h3>
+                    <p>$6.49</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Green Juice">
+                    <h3>Green Juice</h3>
+                    <p>$4.99</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Detox Smoothie">
+                    <h3>Detox Smoothie</h3>
+                    <p>$5.99</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Breakfast -->
+                <div class="product-card" data-category="breakfast">
+                    <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Oatmeal Bowl">
+                    <h3>Oatmeal Bowl</h3>
+                    <p>$6.99</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="breakfast">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Avocado Toast">
+                    <h3>Avocado Toast</h3>
+                    <p>$7.49</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="breakfast">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Fruit Parfait">
+                    <h3>Fruit Parfait</h3>
+                    <p>$5.49</p>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                    <p>"GreenEats changed my eating habits! So fresh and convenient."</p>
+                    <h4>- Sarah J.</h4>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                    <p>"The fastest delivery ever. Never going back to fast food!"</p>
+                    <h4>- Michael T.</h4>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get exclusive discounts and health tips!</p>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>GreenEats</h3>
+                    <p>Delivering fresh, organic food since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Organic St, Farmville</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@greeneats.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 GreenEats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
